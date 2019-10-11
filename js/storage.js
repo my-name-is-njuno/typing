@@ -9,6 +9,8 @@ let storage = (function () {
 	return {
 		storeInfo: function (dt, name) {
 			let wpm = dt.wpm
+			let cpm = dt.cpm
+			let accuracy = dt.accuracy
 			let nm = name
 
 			$.ajax({
@@ -16,7 +18,9 @@ let storage = (function () {
 				url: 'backend/savedata.php',
 				data: {
 					name: nm,
-					wpm: wpm
+					wpm: wpm,
+					cpm: cpm,
+					accuracy: accuracy
 				},
 				success: function (response) {
 					console.log(response)

@@ -1,4 +1,24 @@
 let events = (function (data, ui, storage, cert) {
+
+
+
+  let showTopSpeed = function () {
+
+    $.ajax({
+      type: 'GET',
+      url: 'backend/getusers.php',
+      dataType: 'JSON',
+      success: function (response) {
+        console.log(response)
+        ui.fillTopSpeed(response)
+      }
+    });
+
+  }
+
+
+
+
   let addEventListenerr = function () {
     // downlad button
 
@@ -158,16 +178,18 @@ let events = (function (data, ui, storage, cert) {
       // put focus on input
       ui.putFocusOnInput();
 
+
+      // 
+      showTopSpeed()
+
       // add event listeners
       addEventListenerr();
 
 
-      $.getJSON('backend/data/topspeed.json', function (data) {
 
-        ui.fillTopSpeed(data)
 
-        console.log(data)
-      });
+
+
 
 
 
