@@ -12,7 +12,7 @@ $con = mysqli_connect($servername, $username, $password, $dbname);
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
-$sql = "SELECT name, wpm FROM users";
+$sql = "SELECT name, wpm FROM users ORDER BY wpm DESC LIMIT 10";
 
 $result = mysqli_query($con, $sql);
 
