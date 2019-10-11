@@ -1,4 +1,4 @@
-let duration = 3
+let duration = 60
 let textNumber = Math.floor(Math.random() * 3)
 
 events.init(duration, textNumber, false);

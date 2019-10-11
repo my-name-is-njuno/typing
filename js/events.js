@@ -9,7 +9,7 @@ let events = (function (data, ui, storage, cert) {
       url: 'backend/getusers.php',
       dataType: 'JSON',
       success: function (response) {
-        console.log(response)
+        // console.log(response)
         ui.fillTopSpeed(response)
       }
     });
@@ -30,7 +30,7 @@ let events = (function (data, ui, storage, cert) {
         let certData = data.getCertData();
         cert.generateCert(certData, name);
         storage.storeInfo(certData, name);
-        // location.reload();
+        location.reload();
       }
     });
 
