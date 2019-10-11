@@ -11,7 +11,7 @@ $accuracy = (int) $_POST['accuracy'];
 
 $servername = "localhost";
 $username = "root";
-$password = "Java_2147483647";
+$password = "";
 $dbname = "typing";
 
 // Create connection
