@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "Java_2147483647";
 $dbname = "typing";
 
 // Create connection
