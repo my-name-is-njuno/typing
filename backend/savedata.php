@@ -37,30 +37,26 @@ try {
     );
 
     //Get data from existing json file
-    if(file_get_contents($myFile)) {
-        $jsondata = file_get_contents($myFile);
 
-        // converts json data into array
-        $arr_data = json_decode($jsondata, true);
+    $jsondata = file_get_contents($myFile);
 
-        // Push user data to array
-        array_push($arr_data, $formdata);
+    // converts json data into array
+    $arr_data = json_decode($jsondata, true);
+
+    // Push user data to array
+    array_push($arr_data, $formdata);
 
 
-        $sorted = array_orderby($arr_data, 'wpm', SORT_DESC, 'name', SORT_ASC);
+    $sorted = array_orderby($arr_data, 'wpm', SORT_DESC, 'name', SORT_ASC);
 
-        //Convert updated array to JSON
-        $jsondata = json_encode($sorted, JSON_PRETTY_PRINT);
+    //Convert updated array to JSON
+    $jsondata = json_encode($sorted, JSON_PRETTY_PRINT);
 
-        //write json data into data.json file
-        if (file_put_contents($myFile, $jsondata)) {
-            echo 'Data successfully saved';
-        } else
-            echo "error";
-    } else {
-        echo 'Data file not found'
-    }
-    
+    //write json data into data.json file
+    if (file_put_contents($myFile, $jsondata)) {
+        echo 'Data successfully saved ' . $jsondata;
+    } else
+        echo "error " . $jsondata;
 } catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
