@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Typing Test</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+
+
+
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon//manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Typing Gurus </div>
+      <div class="list-group list-group-flush">
+        <span href="#" class="list-group-item list-group-item-action bg-light btn btn-success">Top 10 Speeds</span>
+        <span class="small-text" id="ts"></span>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-danger" id="menu-toggle">Hide Top Speeds</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="video.html">Training Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resources.html">Resources</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+
+
+
+
+      <div class="container-fluid">
+
+        <div class="row p-5 text-center">
+
+
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-3 custom-style-for-col-sm-3">
+                <div class="m-1  add-margin">
+                  <div class="rect">
+                    <span id="words-per-minutes"> 0 </span>
+                    <br />
+                    W P M
+                  </div>
+                  <div class="sm-rect">
+                    <span id="words-per-minutes-change">0</span>%<br />
+                    Change
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 custom-style-for-col-sm-3">
+                <div class="m-1  add-margin">
+                  <div class="rect">
+                    <span id="characters-per-minutes"> 0</span>
+                    <br />
+                    C P M
+                  </div>
+                  <div class="sm-rect">
+                    <span id="characters-per-minutes-change">0</span>%<br />
+                    Change
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3  custom-style-for-col-sm-3">
+                <div class="m-1  add-margin">
+                  <div class="rect">
+                    <span id="accuracy">0 </span>
+                    <br />
+                    Accuracy
+                  </div>
+                  <div class="sm-rect">
+                    <span id="accuracy-change">0</span>%<br />
+                    Change
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3   custom-style-for-col-sm-3">
+                <div class="m-1  add-margin">
+                  <div class="rect">
+                    <span id="time-left">60 </span>
+                    <br />
+                    TIME LEFT
+                  </div>
+                  <div class="sm-rect">
+                    <span id="completion-time">60</span> <br />
+                    Secs
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="row p-5 text-center">
+              <div class="content"></div>
+            </div>
+
+            <div class="row  text-center">
+              <input type="text" id="test-input" />
+            </div>
+
+            <div class="row text-center">
+              <div class="mx-auto">
+                <button class="btn btn-lg btn-danger m-5" id="restart-btn">Restart</button>
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+    <!-- /#page-content-wrapper -->
+
+
+
+
+
+
+
+
+    <div class="apply-bg">
+      <div class="bg-light border-right" id="sidebar-wrapper-right">
+        <div class="sidebar-heading">Typing Gurus </div>
+
+        <div id="advertisements">
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" id="modal">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h5 class="modal-title text-center" id="exampleModalLabel">
+              Your Finished Your Test
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="modal-data-goes-here"></div>
+            <input width="80%" class="form-control my-3 mx-auto" name="" id="name-input" value="" />
+            <div>
+              <small id="help-text" style="color: red; font-style: italic"></small>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              Close
+            </button>
+            <button type="button" id="get-cert" class="btn btn-primary">
+              Download Your Certificate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+
+  <script src="js/sentences.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/cert.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

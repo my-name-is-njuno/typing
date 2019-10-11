@@ -1,0 +1,159 @@
+/*body {
+  background: url("bc.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-width: 1200px;
+  overflow: hidden;
+  height: 100vh;
+}*/
+
+
+body {
+  background: #2196f3;
+  min-width: 970px !important;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container,
+.container-fluid {
+  min-width: 970px !important;
+}
+
+
+.add-margin {
+  background: rgba(247, 2, 145, 0.5);
+  width: 100%;
+  color: white;
+  min-height: 150px;
+  padding: 20px;
+}
+
+.rect {
+  min-height: 80px;
+  border-bottom: 1px solid white;
+  font-size: x-large;
+}
+
+.content {
+  color: #fff;
+  height: 145px;
+  font-size: 3em;
+  overflow: scroll;
+  scroll-behavior: auto;
+  background: black;
+  width: 100%;
+  margin: 0 20px;
+  padding: 10px;
+}
+
+.videos-from-youtube {
+
+  height: 500px;
+
+  overflow: scroll;
+  scroll-behavior: auto;
+
+}
+
+#test-input {
+  width: 60%;
+  margin: 0 auto;
+  font-size: xx-large;
+  background: rgba(247, 2, 145, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.active-word {
+  background: rgb(159, 2, 250);
+  border-radius: 5px;
+}
+
+.wrong-character {
+  color: red;
+  text-decoration: underline;
+}
+
+.correct-character {
+  color: green;
+}
+
+.negative-change {
+  background-color: mediumvioletred;
+}
+
+.positive-change {
+  background-color: greenyellow;
+  color: black;
+}
+
+
+
+
+
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+.sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #000;
+}
+
+#sidebar-wrapper .sidebar-heading {
+
+  border-right: 1px solid #000;
+}
+
+#sidebar-wrapper .list-group {
+  width: 20rem;
+  overflow: hidden;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -20rem;
+  }
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+
+.apply-bg {
+  background: #fff;
+  width: 400px;
+  height: 100vh;
+}
+
+.apply-bg .sidebar-heading {
+  border-left: 1px solid #000;
+}
