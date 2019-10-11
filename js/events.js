@@ -10,7 +10,7 @@ let events = (function (data, ui, storage, cert) {
         let certData = data.getCertData();
         cert.generateCert(certData, name);
         storage.storeInfo(certData, name);
-        location.reload();
+        // location.reload();
       }
     });
 

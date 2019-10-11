@@ -19,7 +19,7 @@ let storage = (function () {
 					wpm: wpm
 				},
 				success: function (response) {
-					$('#result').html(response);
+					console.log(response)
 				}
 			});
 		},
