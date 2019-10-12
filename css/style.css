@@ -8,19 +8,17 @@
   height: 100vh;
 }*/
 
-
 body {
   background: #2196f3;
   min-width: 970px !important;
   overflow: hidden;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .container,
 .container-fluid {
   min-width: 970px !important;
 }
-
 
 .add-margin {
   background: rgba(247, 2, 145, 0.5);
@@ -49,12 +47,10 @@ body {
 }
 
 .videos-from-youtube {
-
   height: 500px;
 
   overflow: scroll;
   scroll-behavior: auto;
-
 }
 
 #test-input {
@@ -90,18 +86,13 @@ body {
   color: black;
 }
 
-
-
-
-
-
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -20rem;
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
 }
 
 .sidebar-heading {
@@ -111,7 +102,6 @@ body {
 }
 
 #sidebar-wrapper .sidebar-heading {
-
   border-right: 1px solid #000;
 }
 
@@ -146,7 +136,6 @@ body {
 .small-text {
   font-size: 14px;
 }
-
 
 .apply-bg {
   background: #fff;
