@@ -1,41 +1,30 @@
-let events = (function (data, ui, storage, cert) {
-
-
-
-  let showTopSpeed = function () {
-
+let events = (function(data, ui, storage, cert) {
+  let showTopSpeed = function() {
     $.ajax({
-      type: 'GET',
-      url: 'backend/getusers.php',
-      dataType: 'JSON',
-      success: function (response) {
+      type: "GET",
+      url: "backend/getusers.php",
+      dataType: "JSON",
+      success: function(response) {
         // console.log(response)
-        ui.fillTopSpeed(response)
+        ui.fillTopSpeed(response);
       }
     });
+  };
 
-  }
-
-
-
-
-  let addEventListenerr = function () {
+  let addEventListenerr = function() {
     // downlad button
 
     ui.getDomElements().download.addEventListener("click", (e) => {
       if (ui.isEmptyName()) {
         ui.flagNameInput();
       } else {
-        let name = escape(ui.getDomElements().nameInput.value.trim())
+        let name = escape(ui.getDomElements().nameInput.value.trim());
         let certData = data.getCertData();
         cert.generateCert(certData, name);
         storage.storeInfo(certData, name);
         location.reload();
       }
     });
-
-
-
 
     // character typing event
 
@@ -59,7 +48,7 @@ let events = (function (data, ui, storage, cert) {
     window.addEventListener("resize", ui.scroll());
   };
 
-  let launchTest = function (e) {
+  let launchTest = function(e) {
     // e.preventDefault();
     // console.log("Key pressed");
     // if test ended, do nothing
@@ -96,11 +85,11 @@ let events = (function (data, ui, storage, cert) {
         } else {
           clearInterval(b);
           data.endTest();
-          ui.getDomElements().restartBtn.style.display = 'block'
+          ui.getDomElements().restartBtn.style.display = "block";
           ui.fillModal(results.wpm);
           ui.showModal();
-          ui.clearInputAfterFinish()
-          ui.disableInput()
+          ui.clearInputAfterFinish();
+          ui.disableInput();
         }
         // update time left - if time left reduce by one sec otherwise end test
         // show results
@@ -139,15 +128,20 @@ let events = (function (data, ui, storage, cert) {
   };
 
   return {
-    init: function (duration = 60, textNumber = 0, restart = false) {
+    init: function(duration = 60, textNumber = 0, restart = false) {
       // fill content with words
-      if (restart) {
-        data.resetTestControls()
-        data.setTestStartControls()
-        ui.enableInput()
-        ui.clearModalDiv()
-        ui.clearTestResultsDiv()
+      // if (restart) {
+      //   location.reload()
+      //   data.resetTestControls()
+      //   data.setTestStartControls()
+      //   ui.enableInput()
+      //   ui.clearModalDiv()
+      //   ui.clearTestResultsDiv()
 
+      // }
+
+      if (restart) {
+        location.reload();
       }
 
       data.setTestContent(textNumber);
@@ -155,7 +149,7 @@ let events = (function (data, ui, storage, cert) {
       ui.fillContentDiv(testContent);
 
       // hide restart btn
-      ui.getDomElements().restartBtn.style.display = 'none'
+      ui.getDomElements().restartBtn.style.display = "none";
 
       //   set time
 
@@ -178,21 +172,11 @@ let events = (function (data, ui, storage, cert) {
       // put focus on input
       ui.putFocusOnInput();
 
-
-      // 
-      showTopSpeed()
+      //
+      showTopSpeed();
 
       // add event listeners
       addEventListenerr();
-
-
-
-
-
-
-
-
-
     }
   };
 })(data, ui, storage, cert);
