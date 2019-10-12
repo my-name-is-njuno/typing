@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-149912367-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-149912367-1");
+    </script>
+
     <meta charset="UTF-8" />
     <meta
       name="description"
@@ -151,6 +166,14 @@
         </nav>
 
         <div class="container-fluid">
+          <div class="row text-center">
+            <div class="mx-auto">
+              <button class="btn btn-lg btn-danger m-5" id="restart-btn">
+                Restart
+              </button>
+            </div>
+          </div>
+
           <div class="row p-5 text-center">
             <div class="col-sm-12">
               <div class="row">
@@ -214,14 +237,6 @@
 
               <div class="row  text-center">
                 <input type="text" id="test-input" />
-              </div>
-
-              <div class="row text-center">
-                <div class="mx-auto">
-                  <button class="btn btn-lg btn-danger m-5" id="restart-btn">
-                    Restart
-                  </button>
-                </div>
               </div>
             </div>
           </div>
